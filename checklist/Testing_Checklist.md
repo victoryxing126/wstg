@@ -29,6 +29,7 @@ Note: The `Status` column can be set for values similar to "Pass", "Fail", "N/A"
 | WSTG-CONF-09      | Test File Permission                                                       |        |       |
 | WSTG-CONF-10      | Test for Subdomain Takeover                                                |        |       |
 | WSTG-CONF-11      | Test Cloud Storage                                                         |        |       |
+| WSTG-CONF-12      | Testing for Content Security Policy                                        |        |       |
 | **WSTG-IDNT**     | **Identity Management Testing**                                            |        |       |
 | WSTG-IDNT-01      | Test Role Definitions                                                      |        |       |
 | WSTG-IDNT-02      | Test User Registration Process                                             |        |       |
@@ -61,6 +62,7 @@ Note: The `Status` column can be set for values similar to "Pass", "Fail", "N/A"
 | WSTG-SESS-07      | Testing Session Timeout                                                    |        |       |
 | WSTG-SESS-08      | Testing for Session Puzzling                                               |        |       |
 | WSTG-SESS-09      | Testing for Session Hijacking                                              |        |       |
+| WSTG-SESS-10      | Testing JSON Web Tokens                                                    |        |       |
 | **WSTG-INPV**     | **Input Validation Testing**                                               |        |       |
 | WSTG-INPV-01      | Testing for Reflected Cross Site Scripting                                 |        |       |
 | WSTG-INPV-02      | Testing for Stored Cross Site Scripting                                    |        |       |
@@ -79,7 +81,7 @@ Note: The `Status` column can be set for values similar to "Pass", "Fail", "N/A"
 | WSTG-INPV-15      | Testing for HTTP Splitting Smuggling                                       |        |       |
 | WSTG-INPV-16      | Testing for HTTP Incoming Requests                                         |        |       |
 | WSTG-INPV-17      | Testing for Host Header Injection                                          |        |       |
-| WSTG-INPV-18      | Testing for Server-side Template Injection                                 |        |       |
+| WSTG-INPV-18      | Testing for Server-Side Template Injection                                 |        |       |
 | WSTG-INPV-19      | Testing for Server-Side Request Forgery                                    |        |       |
 | **WSTG-ERRH**     | **Error Handling**                                                         |        |       |
 | WSTG-ERRH-01      | Testing for Improper Error Handling                                        |        |       |
@@ -94,18 +96,18 @@ Note: The `Status` column can be set for values similar to "Pass", "Fail", "N/A"
 | WSTG-BUSL-02      | Test Ability to Forge Requests                                             |        |       |
 | WSTG-BUSL-03      | Test Integrity Checks                                                      |        |       |
 | WSTG-BUSL-04      | Test for Process Timing                                                    |        |       |
-| WSTG-BUSL-05      | Test Number of Times a Function Can be Used Limits                         |        |       |
+| WSTG-BUSL-05      | Test Number of Times a Function Can Be Used Limits                         |        |       |
 | WSTG-BUSL-06      | Testing for the Circumvention of Work Flows                                |        |       |
 | WSTG-BUSL-07      | Test Defenses Against Application Misuse                                   |        |       |
 | WSTG-BUSL-08      | Test Upload of Unexpected File Types                                       |        |       |
 | WSTG-BUSL-09      | Test Upload of Malicious Files                                             |        |       |
 | **WSTG-CLIENT**   | **Client-side Testing**                                                    |        |       |
-| WSTG-CLNT-01      | Testing for DOM based Cross Site Scripting                                 |        |       |
+| WSTG-CLNT-01      | Testing for DOM Based Cross Site Scripting                                 |        |       |
 | WSTG-CLNT-02      | Testing for JavaScript Execution                                           |        |       |
 | WSTG-CLNT-03      | Testing for HTML Injection                                                 |        |       |
-| WSTG-CLNT-04      | Testing for Client-side URL Redirect                                       |        |       |
+| WSTG-CLNT-04      | Testing for Client-Side URL Redirect                                       |        |       |
 | WSTG-CLNT-05      | Testing for CSS Injection                                                  |        |       |
-| WSTG-CLNT-06      | Testing for Client-side Resource Manipulation                              |        |       |
+| WSTG-CLNT-06      | Testing for Client-Side Resource Manipulation                              |        |       |
 | WSTG-CLNT-07      | Test Cross Origin Resource Sharing                                         |        |       |
 | WSTG-CLNT-08      | Testing for Cross Site Flashing                                            |        |       |
 | WSTG-CLNT-09      | Testing for Clickjacking                                                   |        |       |
