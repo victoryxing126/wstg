@@ -56,7 +56,7 @@ Methods to protect a web page from clickjacking can be divided into a few main m
 
 The most common client-side method, that has been developed to protect a web page from clickjacking, is called Frame Busting and it consists of a script in each page that should not be framed. The aim of this technique is to prevent a site from functioning when it is loaded inside a frame.
 
-The structure of frame busting code typically consists of a "conditional statement" and a "counter-action" statement. For this type of protection, there are some work arounds that fall under the name of "Bust frame busting". Some of this techniques are browser-specific while others work across browsers.
+The structure of frame busting code typically consists of a "conditional statement" and a "counter-action" statement. For this type of protection, there are some workarounds that fall under the name of "Bust frame busting". Some of this techniques are browser-specific while others work across browsers.
 
 ##### Mobile Website Version
 
@@ -191,7 +191,7 @@ Attacker code:
 <iframe src="http://example.org/?param=<script>if">
 ```
 
-- **Chrome 4.0 XSSAuditor filter**: It has a little different behaviour compared to IE8 XSS filter, in fact with this filter an attacker could deactivate a "script" by passing its code in a request parameter. This enables the framing page to specifically target a single snippet containing the frame busting code, leaving all the other codes intact.
+- **Chrome 4.0 XSSAuditor filter**: It has a little different behavior compared to IE8 XSS filter, in fact with this filter an attacker could deactivate a "script" by passing its code in a request parameter. This enables the framing page to specifically target a single snippet containing the frame busting code, leaving all the other codes intact.
 
 Example: Target web page frame busting code:
 

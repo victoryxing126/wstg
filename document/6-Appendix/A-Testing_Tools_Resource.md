@@ -61,12 +61,14 @@ The list contains only tools that are freely available to download and use (alth
 
 ##### Remote Brute Force
 
+- [OWASP ZAP](https://www.zaproxy.org)
 - [Patator](https://github.com/lanjelot/patator)
 - [THC Hydra](https://github.com/vanhauser-thc/thc-hydra)
 - [Burp Suite Community Edition (Intruder)](https://portswigger.net/burp/communitydownload)
 
 #### Fuzzers
 
+- [Ffuf](https://github.com/ffuf/ffuf)
 - [Wfuzz](https://github.com/xmendez/wfuzz)
 - [Jdam](https://gitlab.com/michenriksen/jdam)
 
@@ -89,10 +91,20 @@ The list contains only tools that are freely available to download and use (alth
 
 - [Gobuster](https://github.com/OJ/gobuster)
 
+### Port and Service Discovery
+
+- [Nmap](https://nmap.org/)
+
 ## Vulnerability Scanners
 
-- [w3af](https://w3af.org)
 - [OWASP ZAP](https://www.zaproxy.org)
+- [Nikto](https://cirt.net/Nikto2)
+- [Nuclei](https://nuclei.projectdiscovery.io/)
+
+## Exploitation Frameworks
+
+- [Metasploit](https://github.com/rapid7/metasploit-framework)
+- [BeEF](https://github.com/beefproject/beef/)
 
 ## Linux Distributions
 
@@ -101,7 +113,6 @@ The list contains only tools that are freely available to download and use (alth
 - [Samurai](https://github.com/SamuraiWTF/samuraiwtf)
 - [Santoku](https://sourceforge.net/projects/santoku/)
 - [BlackArch](https://blackarch.org/downloads.html)
-- [PenToo](https://www.pentoo.ch)
 
 ## Source Code Analyzers
 

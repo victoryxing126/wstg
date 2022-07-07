@@ -11,7 +11,7 @@ With the proliferation of virtual web servers, the traditional 1:1-type relation
 
 Security professionals are sometimes given a set of IP addresses as a target to test. It is arguable that this scenario is more akin to a penetration test-type engagement, but in any case it is expected that such an assignment would test all web applications accessible through this target. The problem is that the given IP address hosts an HTTP service on port 80, but if a tester should access it by specifying the IP address (which is all they know) it reports "No web server configured at this address" or a similar message. But that system could "hide" a number of web applications, associated to unrelated symbolic (DNS) names. Obviously, the extent of the analysis is deeply affected by the tester tests all applications or only tests the applications that they are aware of.
 
-Sometimes, the target specification is richer. The tester may be given a list of IP addresses and their corresponding symbolic names. Nevertheless, this list might convey partial information, i.e., it could omit some symbolic names and the client may not even being aware of that (this is more likely to happen in large organizations).
+Sometimes, the target specification is richer. The tester may be given a list of IP addresses and their corresponding symbolic names. Nevertheless, this list might convey partial information, i.e., it could omit some symbolic names and the client may not even be aware of that (this is more likely to happen in large organizations).
 
 Other issues affecting the scope of the assessment are represented by web applications published at non-obvious URLs (e.g., `http://www.example.com/some-strange-URL`), which are not referenced elsewhere. This may happen either by error (due to misconfigurations), or intentionally (for example, unadvertised administrative interfaces).
 
@@ -19,7 +19,7 @@ To address these issues, it is necessary to perform web application discovery.
 
 ## Test Objectives
 
-- Enumerate the applications within scope that exist on a web server.
+- Enumerate the applications within the scope that exist on a web server.
 
 ## How to Test
 
@@ -59,9 +59,9 @@ Another option is to probe for URLs which might be likely candidates for non-pub
 
 ### Approaches to Address Issue 2 - Non-standard Ports
 
-It is easy to check for the existence of web applications on non-standard ports. A port scanner such as nmap is capable of performing service recognition by means of the `-sV` option, and will identify http[s] services on arbitrary ports. What is required is a full scan of the whole 64k TCP port address space.
+It is easy to check for the existence of web applications on non-standard ports. A port scanner such as Nmap is capable of performing service recognition by means of the `-sV` option, and will identify http[s] services on arbitrary ports. What is required is a full scan of the whole 64k TCP port address space.
 
-For example, the following command will look up, with a TCP connect scan, all open ports on IP `192.168.1.100` and will try to determine what services are bound to them (only *essential* switches are shown – nmap features a broad set of options, whose discussion is out of scope):
+For example, the following command will look up, with a TCP connect scan, all open ports on IP `192.168.1.100` and will try to determine what services are bound to them (only *essential* switches are shown – Nmap features a broad set of options, whose discussion is out of scope):
 
 `nmap –Pn –sT –sV –p0-65535 192.168.1.100`
 
@@ -87,7 +87,7 @@ From this example, one see that:
 - It looks like there is an HTTPS server on port 443 (but this needs to be confirmed, for example, by visiting `https://192.168.1.100` with a browser).
 - On port 901 there is a Samba SWAT web interface.
 - The service on port 1241 is not HTTPS, but is the SSL-wrapped Nessus daemon.
-- Port 3690 features an unspecified service (nmap gives back its *fingerprint* - here omitted for clarity - together with instructions to submit it for incorporation in the nmap fingerprint database, provided you know which service it represents).
+- Port 3690 features an unspecified service (Nmap gives back its *fingerprint* - here omitted for clarity - together with instructions to submit it for incorporation in the Nmap fingerprint database, provided you know which service it represents).
 - Another unspecified service on port 8000; this might possibly be HTTP, since it is not uncommon to find HTTP servers on this port. Let's examine this issue:
 
 ```bash
@@ -112,7 +112,7 @@ This confirms that in fact it is an HTTP server. Alternatively, testers could ha
 
 - Apache Tomcat running on port 8080.
 
-The same task may be performed by vulnerability scanners, but first check that the scanner of choice is able to identify HTTP[S] services running on non-standard ports. For example, Nessus is capable of identifying them on arbitrary ports (provided it is instructed to scan all the ports), and will provide, with respect to nmap, a number of tests on known web server vulnerabilities, as well as on the SSL configuration of HTTPS services. As hinted before, Nessus is also able to spot popular applications or web interfaces which could otherwise go unnoticed (for example, a Tomcat administrative interface).
+The same task may be performed by vulnerability scanners, but first check that the scanner of choice is able to identify HTTP[S] services running on non-standard ports. For example, Nessus is capable of identifying them on arbitrary ports (provided it is instructed to scan all the ports), and will provide, with respect to Nmap, a number of tests on known web server vulnerabilities, as well as on the SSL configuration of HTTPS services. As hinted before, Nessus is also able to spot popular applications or web interfaces which could otherwise go unnoticed (for example, a Tomcat administrative interface).
 
 ### Approaches to Address Issue 3 - Virtual Hosts
 
@@ -154,7 +154,7 @@ This process is similar to the previous one, but relies on inverse (PTR) DNS rec
 
 #### Web-based DNS Searches
 
-This kind of search is akin to DNS zone transfer, but relies on web-based services that enable name-based searches on DNS. One such service is the [Netcraft Search DNS](https://searchdns.netcraft.com/?host) service.  The tester may query for a list of names belonging to your domain of choice, such as `example.com`. Then they will check whether the names they obtained are pertinent to the target they are examining.
+This kind of search is akin to DNS zone transfer, but relies on web-based services that enable name-based searches on DNS. One such service is the [Netcraft Search DNS](https://searchdns.netcraft.com/?host) service. The tester may query for a list of names belonging to your domain of choice, such as `example.com`. Then they will check whether the names they obtained are pertinent to the target they are examining.
 
 #### Reverse-IP Services
 
